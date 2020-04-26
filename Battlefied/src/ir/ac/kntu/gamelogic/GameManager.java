@@ -72,6 +72,7 @@ public class GameManager {
                 default:
                     break;
             }
+            random = RandomHelper.nextInt(100);
             if(firstTeam.isAlive() && secondTeam.isAlive()){
                 switch (firstShot){
                     case 1:
@@ -99,7 +100,12 @@ public class GameManager {
             System.out.println("Team B = " + secondTeam.toString());
 
         }
-
+        if(isAliveA()){
+            System.out.println("Team A Won !!!!");
+        }
+        else {
+            System.out.println("Team B won !!!!");
+        }
 
     }
     public Soldier getRandomSoldier(ArrayList<Soldier> team){
